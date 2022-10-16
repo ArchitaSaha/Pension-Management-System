@@ -1,0 +1,119 @@
+html, body
+{
+    margin: 0px;
+}
+
+hr
+{
+    width: 100%;
+}
+
+/* header, footer
+{
+    font-family: Broadway;
+    margin: 0 auto;
+	padding: 5em 3em;
+	text-align: center;
+    background: #FFF;
+} */
+
+/* header h1
+{
+    color: yellowgreen;
+    font-size: 40px;
+    font-weight: lighter;
+    margin-bottom: 5px;
+} */
+
+/* header span
+{
+    color: #222;
+}
+
+footer span
+{
+  color: #AAA;
+} */
+
+div.container-fluid
+{
+    font-family: Broadway;
+    margin: 0 auto;
+	padding: 3em 3em;
+	text-align: center;
+}
+
+div.container-fluid a
+{
+    color: lemonchiffon;
+    /* color: #F8B195; */
+    text-decoration: none;
+    /* font: 24px Broadway; */
+    font: 20px "Baskerville Old Face";
+    letter-spacing: 3px;
+    margin: 0px 10px;
+    padding: 3px 3px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.gradient
+{
+    /* background: #355C7D; */
+    background-image: linear-gradient(to right, midnightblue, #355c7d , #6c5b7b, #c06c84, #fc7280, #f8b195);
+    /* background: linear-gradient(to right, midnightblue, #355C7D, #6C5B7B, #C06C84, #F67280, #F8B195) */
+    /* background: linear-gradient(to right, #594F4F, #547980, #45ADA8, #9DE0AD, #E5FCC2); */
+}
+
+.blue
+{
+    background: whitesmoke;
+}
+
+.bar
+{
+    height: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+div.circleBehind a:before, div.circleBehind a:after
+{
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    /* border: 4px solid rgb(228, 155, 155); */
+    /* border: 4px solid rgb(151, 189, 189); */
+    /* border: 4px solid lemonchiffon; */
+    /* border: 4px solid #6C5B7B; */
+    border: 4px solid #d2bc96;
+    
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+div.circleBehind a:after
+{
+    border-width: 2px;
+    transition: all 0.4s;
+}
+
+div.circleBehind a:hover:before
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+div.circleBehind a:hover:after
+{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}

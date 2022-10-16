@@ -1,0 +1,29 @@
+<div class="container-fluid gradient circleBehind">
+    <a routerLink="/home">
+        <fa-icon [icon]="homeIcon"></fa-icon>
+        Home
+    </a>
+    <a routerLink="/about">
+        <fa-icon [icon]="appIcon"></fa-icon>
+        About
+    </a>
+    <a routerLink="/login">
+        <fa-icon [icon]="loginIcon"></fa-icon>
+        Login
+    </a>
+    <a routerLink="/signup">
+        <fa-icon [icon]="signupIcon"></fa-icon>
+        Sign up
+    </a>
+    <a *ngIf="loginStatus" routerLink="/profile">
+        <fa-icon [icon]="profileIcon"></fa-icon>
+        Profile
+    </a>
+    <a routerLink="/contact-us">
+        <fa-icon [icon]="contactIcon"></fa-icon>
+        Contact Us
+    </a>
+</div>
+<div class="container blue bar">
+    <hr>
+</div>

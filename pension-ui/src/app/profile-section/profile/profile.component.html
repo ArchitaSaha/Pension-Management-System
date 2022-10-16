@@ -1,0 +1,62 @@
+<body>
+	<div class="container">
+		<div class="contact-box">
+			<div class="left">
+				<h2>Welcome, {{ pensioner.name }}</h2>
+			</div>
+			<div class="right">
+				<table>
+					<tr class="field">
+						<th>Aadhaar Number</th>
+						<td class="tdmid">:</td>
+						<td>{{ pensioner.aadhaarNumber }}</td>
+					</tr>
+					<tr class="field">
+						<th>PAN Number</th>
+						<td class="tdmid">:</td>
+						<td>{{ pensioner.pan }}</td>
+					</tr>
+					<tr class="field">
+						<th>Date of Birth</th>
+						<td class="tdmid">:</td>
+						<td>{{ pensioner.dob.substring(0,10) }}</td>
+					</tr>
+					<tr class="field">
+						<th>Salary Earned</th>
+						<td class="tdmid">:</td>
+						<td>{{ pensioner.salaryEarned }}</td>
+					</tr>
+					<tr class="field">
+						<th>Allowances</th>
+						<td class="tdmid">:</td>
+						<td>{{ pensioner.allowances }}</td>
+					</tr>
+					<tr class="field">
+						<th>Pension Type</th>
+						<td class="tdmid">:</td>
+						<td>{{ pensioner.pensionType }}</td>
+					</tr>
+					<tr class="field">
+						<th class="tdmid">Bank Type</th>
+						<td>:</td>
+						<td>{{ pensioner.bankType }}</td>
+					</tr>
+					<!-- <tr class="field" [hidden]="!submitted"> -->
+					<tr class="field" *ngIf="submitted">
+						<th>Pension Amount</th>
+						<td class="tdmid">:</td>
+						<td>{{ pensioner.pensionAmount }}</td>
+					</tr>
+					<!-- <tr class="field" [hidden]="!submitted"> -->
+					<tr class="field" *ngIf="submitted">
+						<th>Service Charge</th>
+						<td class="tdmid">:</td>
+						<td>{{ pensioner.serviceCharge }}</td>
+					</tr>
+				</table>
+				<br>
+				<button (click)="calculatePension()" class="btn">Calculate Pension</button>
+			</div>
+		</div>
+	</div>
+</body>

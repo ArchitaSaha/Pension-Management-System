@@ -1,0 +1,14 @@
+body
+{
+    /* background-image: url('https://wallpapercave.com/wp/wp10491027.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; */
+}
+router-outlet
+{
+    background-image: url('https://wallpapercave.com/wp/wp10491027.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}

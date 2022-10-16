@@ -1,0 +1,17 @@
+<body>
+	<div class="container">
+		<div class="contact-box">
+			<div class="left"></div>
+			<form method="post" (ngSubmit)="onSend(contactForm)" #contactForm="ngForm">
+				<div class="right">
+					<h2>Contact Us</h2>
+					<input type="text" class="field" placeholder="Your Name" required ngModel name="name">
+					<input type="email" class="field" placeholder="Your Email" required ngModel name="eaddr">
+					<input type="text" class="field" placeholder="Phone" required ngModel name="phone">
+					<textarea placeholder="Message" class="field textboxcustom" required ngModel name="message"></textarea>
+					<button class="btn">Send</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>

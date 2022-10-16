@@ -1,0 +1,125 @@
+<body>
+	<div class="center beside">
+		<div class="left">
+			<div class="signup_link"><h2>Registration</h2></div>
+			<img src="../../assets/signup.gif">
+			<div class="signup_link">
+				Not a member? <a routerLink="/login">Login</a>
+			</div>
+		</div>
+		<div class="right">
+			<form method="post" (ngSubmit)="onSubmit()" #signupForm="ngForm">
+				<div class="beside">
+					<div class="form-group txt_field two">
+						<div class="left2">
+							<input type="text" id="uname" name="uname" [(ngModel)]="user.username" #uname="ngModel" required class="form-control">
+							<span></span>
+							<label>Username</label>
+						</div>
+						<div class="right2" [hidden]="uname.valid || uname.pristine" class="alert alert-danger">
+							Required!
+						</div>
+					</div>
+	
+					<div class="form-group txt_field two">
+						<div class="left2">
+							<input type="password" id="pass" name="pass" [(ngModel)]="user.password" #pass="ngModel" required class="form-control">
+							<span></span>
+							<label>Password</label>
+						</div>
+						<div class="right2" [hidden]="pass.valid || pass.pristine" class="alert alert-danger">
+							Required!
+						</div>
+					</div>
+				</div>
+	
+				<div class="form-group txt_field">
+					<input type="text" id="name" name="name" [(ngModel)]="user.name" #name="ngModel" required class="form-control">
+					<span></span>
+					<label>Full Name</label>
+					<div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+						Required!
+					</div>
+				</div>
+	
+				<div class="beside">
+					<div class="form-group txt_field two">
+						<div class="left2">
+							<input type="text" id="aadhaar" name="aadhaar" [(ngModel)]="user.aadhaar" #aadhaar="ngModel" required class="form-control">
+							<span></span>
+							<label>Aadhaar Number</label>
+						</div>
+						<div class="right2" [hidden]="aadhaar.valid || aadhaar.pristine" class="alert alert-danger">
+							Required!
+						</div>
+					</div>
+			
+					<div class="form-group txt_field two">
+						<div class="left2">
+							<input type="text" id="pan" name="pan" [(ngModel)]="user.pan" #pan="ngModel" required class="form-control">
+							<span></span>
+							<label>PAN Number</label>
+						</div>
+						<div class="right2" [hidden]="pan.valid || pan.pristine" class="alert alert-danger">
+							Required!
+						</div>
+					</div>
+				</div>
+	
+				<div class="beside">
+					<div class="form-group txt_field three">
+						<input type="date" id="dob" name="dob" [(ngModel)]="user.dob" #dob="ngModel" required class="form-control">
+						<span></span>
+						<!-- <label [hidden]="dob.valid">Date of Birth</label> -->
+					</div>
+	
+					<div class="form-group txt_field three">
+						<div class="left2">
+							<input type="number" id="salary" name="salary" [(ngModel)]="user.salary" #salary="ngModel" required class="form-control">
+							<span></span>
+							<label>Salary Earned</label>
+						</div>
+						<div class="right2" [hidden]="salary.valid || salary.pristine" class="alert alert-danger">
+							Required!
+						</div>
+					</div>
+	
+					<div class="form-group txt_field three">
+						<div class="left2">
+							<input type="number" id="allowances" name="allowances" [(ngModel)]="user.allowances" #allowances="ngModel" required class="form-control">
+							<span></span>
+							<label>Allowances</label>
+						</div>
+						<div class="right2" [hidden]="allowances.valid || allowances.pristine" class="alert alert-danger">
+							Required!
+						</div>
+					</div>
+				</div>
+	
+				<p></p>
+	
+				<div class= "beside">
+					<div class="form-group select_field" style="width: 48%;">
+						<!-- <span></span> -->
+						<label class="pension-bank">Pension Type</label>
+						<select id="pensionType" [(ngModel)]="user.pensionType" name="pensionType" required class="form-control">
+							<option value="self">Self</option>
+							<option value="family">Family</option>
+						</select>
+					</div>
+			
+					<div class="form-group select_field" style="width: 48%;">
+						<!-- <span></span> -->
+						<label class="pension-bank">Bank Type</label>
+						<select id="bankType" [(ngModel)]="user.bankType" name="bankType" required class="form-control">
+							<option value="public">Public</option>
+							<option value="private">Private</option>
+						</select>
+					</div>
+				</div>
+				<span class="br"></span>
+				<input type="submit" value="Sign Up" [disabled]="!signupForm.form.valid">
+			</form>
+		</div>
+	</div>
+</body>
